@@ -1,0 +1,12 @@
+{
+  "login_title": "Inloggen",
+  "login_password": "Wachtwoord:",
+  "login_button": "Inloggen",
+  "slot": "Slot",
+  "saved_message": "Opgeslagen",
+  "logout_button": "Uitloggen",
+  "brand": "Merk",
+  "material": "Type",
+  "color": "Kleur",
+  "settings": "Instellingen"
+}

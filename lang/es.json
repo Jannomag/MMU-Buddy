@@ -1,0 +1,12 @@
+{
+  "login_title": "Iniciar sesión",
+  "login_password": "Contraseña:",
+  "login_button": "Acceder",
+  "slot": "Ranura",
+  "saved_message": "Guardado",
+  "logout_button": "Cerrar sesión",
+  "brand": "Marca",
+  "material": "Tipo",
+  "color": "Color",
+  "settings": "Configuración"
+}

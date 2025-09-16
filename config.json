@@ -1,0 +1,42 @@
+{
+    "containers": [
+        {
+            "title": "Prusa MK4",
+            "slots": [
+                {
+                    "brand": "Prusament",
+                    "material": "PLA",
+                    "color": "#ff6600",
+                    "hidden": false
+                },
+                {
+                    "brand": "ColorFabb",
+                    "material": "TPU",
+                    "color": "#121212",
+                    "hidden": false
+                },
+                {
+                    "brand": "eSun",
+                    "material": "PETG",
+                    "color": "#00aaff",
+                    "hidden": false
+                },
+                {
+                    "brand": "ColorFabb",
+                    "material": "ABS",
+                    "color": "#ee00ff",
+                    "hidden": false
+                },
+                {
+                    "brand": "ColorFabb",
+                    "material": "PLA",
+                    "color": "#fb00ff",
+                    "hidden": false
+                }
+            ]
+        }
+    ],
+    "settings": {
+        "slotCount": 5
+    }
+}

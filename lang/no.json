@@ -1,0 +1,12 @@
+{
+  "login_title": "Logg inn",
+  "login_password": "Passord:",
+  "login_button": "Logg inn",
+  "slot": "Slot",
+  "saved_message": "Laget",
+  "logout_button": "Logg ut",
+  "brand": "Merke",
+  "material": "Type",
+  "color": "Farge",
+  "settings": "Innstillinger"
+}

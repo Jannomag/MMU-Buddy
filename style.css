@@ -1,0 +1,639 @@
+/* Normal */
+@font-face {
+  font-family: 'FreeSans';
+  src: url('fonts/FreeSans.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Oblique / Italic */
+@font-face {
+  font-family: 'FreeSans';
+  src: url('fonts/FreeSansOblique.woff') format('woff');
+  font-weight: 400;
+  font-style: oblique;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'FreeSans';
+  src: url('fonts/FreeSansBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Bold Oblique */
+@font-face {
+  font-family: 'FreeSans';
+  src: url('fonts/FreeSansBoldOblique.woff') format('woff');
+  font-weight: 700;
+  font-style: oblique;
+}
+
+
+:root {
+    color-scheme: light;
+    --color-primary: #fa6831;
+    --color-primary-faded: #fcd6c0;
+    --color-warning: #dc3545;
+    --neutral-100: #ffffff;
+    --neutral-150: #f1f1f1;
+    --neutral-200: #e5e5e5;
+    --neutral-300: #797979;
+    --neutral-400: #585858;
+    --neutral-500: #2a2a2a;
+    --neutral-600: #212529;
+    --neutral-900: #000000;
+    --color-text: var(--neutral-600);
+    --color-text-inverse: var(--neutral-100);
+    --background-body: var(--neutral-100);
+    --icon-primary: var(--color-primary);
+    --icon-secondary: var(--neutral-400);
+    --icon-secondary-inverse: var(--neutral-200);
+    --icon-tertiary: var(--neutral-600);
+    --toast-header-background: var(--neutral-100);
+    --toast-border: var(--neutral-200);
+    --toast-body-background: var(--neutral-100);
+    --current-printer-background: var(--neutral-500);
+    --current-printer-badge-background: var(--neutral-300);
+    --current-printer-badge-text: var(--neutral-100);
+    --card-item-background: var(--neutral-150);
+    --queue-view-border: var(--neutral-200);
+    --available-printers-background: var(--neutral-200);
+    --button-outline: var(--neutral-900);
+    --button-background-highlight: var(--neutral-500);
+    --table-row-background-hover: var(--neutral-200);
+    --breadcrumbs-text: var(--neutral-400);
+    --breadcrumbs-separator: var(--neutral-300);
+    --dropdown-background: var(--neutral-100);
+    --dropdown-border: var(--neutral-200);
+    --droparea-background: var(--background-body);
+    --job-background-hover: var(--neutral-200);
+    --table-header-background: var(--neutral-200);
+    --table-row-highlight: var(--neutral-150);
+    --progress-background-primary: var(--neutral-200);
+    --progress-background-secondary: var(--neutral-150);
+    --sort-icon-disabled-arrow: var(--neutral-200);
+    --tooltip-shadow: var(--neutral-300);
+    --file-tag: var(--neutral-200);
+    --color-secondary: var(--neutral-500);
+    --color-light: var(--neutral-300);
+    --color-navigation: var(--neutral-400);
+    --background-primary: var(--neutral-200);
+    --background-secondary: var(--neutral-150);
+    --background-disabled: var(--neutral-200);
+    --border-primary: var(--neutral-900);
+    --border-secondary: var(--neutral-200)
+}
+
+*[data-theme=DARK] {
+    color-scheme: dark;
+    --color-primary-faded: #9c401e;
+    --neutral-100: #000000;
+    --neutral-200: #1c1e21;
+    --neutral-300: #2a2a2a;
+    --neutral-400: #212529;
+    --neutral-500: #4e4e4e;
+    --neutral-600: #8f8f8f;
+    --neutral-700: #a2a2a2;
+    --neutral-800: #a7a7a7;
+    --neutral-900: #ffffff;
+    --color-secondary: var(--neutral-900);
+    --color-light: var(--neutral-700);
+    --color-navigation: var(--neutral-800);
+    --color-text: var(--neutral-900);
+    --color-text-inverse: var(--neutral-400);
+    --background-body: var(--neutral-200);
+    --background-primary: var(--neutral-300);
+    --background-secondary: var(--neutral-300);
+    --background-disabled: var(--neutral-700);
+    --border-primary: var(--neutral-600);
+    --border-secondary: var(--neutral-500);
+    --icon-secondary: var(--neutral-900);
+    --icon-secondary-inverse: var(--neutral-400);
+    --button-background-highlight: var(--neutral-900);
+    --table-row-background-hover: var(--neutral-500);
+    --breadcrumbs-text: var(--neutral-800);
+    --breadcrumbs-separator: var(--neutral-500);
+    --dropdown-border: var(--neutral-500);
+    --droparea-background: var(--neutral-300);
+    --toast-header-background: var(--neutral-400);
+    --toast-body-background: var(--neutral-400);
+    --toast-border: var(--neutral-500);
+    --current-printer-background: var(--neutral-300);
+    --current-printer-badge-background: var(--neutral-500);
+    --current-printer-badge-text: var(--neutral-900);
+    --card-item-background: var(--neutral-300);
+    --queue-view-border: var(--neutral-500);
+    --available-printers-background: var(--neutral-500);
+    --job-background-hover: var(--neutral-400);
+    --table-header-background: var(--neutral-300);
+    --table-row-highlight: var(--neutral-500);
+    --progress-background-primary: var(--neutral-500);
+    --progress-background-secondary: var(--neutral-300);
+    --sort-icon-disabled-arrow: var(--neutral-500);
+    --tooltip-shadow: var(--neutral-500);
+    --file-tag: var(--neutral-500)
+}
+
+body {
+  margin: 0;
+  font-family: 'FreeSans Medium', sans-serif;
+  background-color: var(--background-body);
+  color: var(--color-text);
+  padding-top: 60px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --logo-color: var(--icon-secondary);
+  }
+}
+
+main {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+main.visible {
+  opacity: 1;
+}
+
+body.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--background-body);
+  color: var(--color-text);
+  font-family: Arial, sans-serif;
+}
+
+
+.login-container {
+  background: var(--toast-body-background);
+  padding: 2rem;
+  border-radius: 2px;
+  border: 1px solid var(--toast-border);
+  text-align: center;
+  width: 300px;
+}
+
+.login-container h1 {
+  color: var(--icon-primary); /* Prusa-Orange */
+  margin-bottom: 1rem;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  text-align: left;
+}
+
+.login-container input[type="password"] {
+  width: 90%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 2px;
+  border: 1px solid var(--toast-border);
+  background: var(--toast-header-background);
+  color: var(--color-text);
+}
+
+.login-container button {
+  background: var(--icon-primary);
+  color: var(--color-text);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-container button:hover {
+  background: var(--color-primary-faded);
+}
+
+.error {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.header {
+  position: fixed;            /* fixiert den Header */
+  top: 0;
+  left: 0;
+  width: 100%;                /* volle Breite */
+  height: 50px;               /* bestehende Höhe */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1em;
+  background-color: var(--background-body);
+  border-bottom: 1px solid var(--border-secondary);
+  z-index: 1000;              /* über allen anderen Inhalten */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* optional, leichter Schatten für Tiefe */
+  flex-shrink: 0;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Abstand zwischen Zahnrad und Logout */
+}
+
+.logo {
+  height: var(--logo-height);
+  width: auto;
+}
+
+/* Logout-Button rechts */
+.logout-button {
+  display: flex;
+  align-items: center;
+  color: var(--icon-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+  margin-right: 2rem;
+  flex-shrink: 0;
+}
+
+.logout-button:hover {
+  color: var(--color-primary-faded);
+}
+
+.logout-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.settings-button {
+  display: flex;
+  align-items: center;
+  color: var(--icon-primary);
+  justify-content: center;
+  transition: color 0.2s;
+  padding: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.settings-button svg {
+  height: 24px;
+  width: 24px;
+}
+
+.settings-button:hover {
+  color: var(--color-primary-faded);
+}
+
+/* Slot cards */
+.slot-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: start;
+}
+
+.slot-container label {
+  font-weight: bold;
+  margin-bottom: 0rem; /* Abstand zwischen Label und Slots */
+  display: block;
+}
+
+.container-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-bottom: 2px solid var(--toast-border);
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0rem;
+  min-width: 10rem;
+  max-width: 25rem;
+  background: transparent;
+  color: var(--icon-primary);
+}
+
+.container-title:focus {
+  outline: none;
+  border-bottom-color: var(--icon-primary);
+}
+
+.slots-wrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+  gap: 1rem;
+}
+
+/* Slot card content */
+.slot {
+  border: 1px solid var(--toast-border);
+  border-radius: 2px;
+  background: var(--toast-body-background);
+  max-width: 350px;
+  height: 280px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;       /* für Buttons */
+  overflow: hidden;         /* für Fade/Hide */
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+/* Slot-Inhalt: Flex, Padding, Gap */
+.slot-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.slot-content {
+  transition: opacity 0.3s ease;
+}
+
+.slot.hidden .slot-content {
+  opacity: 0;
+}
+
+@media (max-width: 600px) {
+  .slots-wrapper {
+    display: grid;
+    grid-template-columns: 1fr; /* eine Spalte = volle Breite */
+    gap: 1rem;
+  }
+
+  .slot {
+    max-width: none;         /* Begrenzung weg */
+    width: 100%;             /* volle Breite */
+    height: auto;           /* Höhe beibehalten */
+    margin: 0;      /* kleiner Abstand unten */
+  }
+}
+
+.slot h2 {
+  margin-top: 0;
+  color: var(--color-text);
+  font-weight: 700;
+  margin-bottom: 0rem;
+}
+
+.slot-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--icon-secondary);
+  position: relative;
+  margin: 1.5rem 0 1rem;
+}
+
+.slot-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 7rem;
+  height: 3px;
+  background: var(--icon-primary);
+  border-radius: 0px;
+}
+
+.slot.hidden {
+  height: 280px;      /* Höhe beibehalten für Button */
+  position: relative; /* wichtig für Button-Position */
+}
+
+/* Slot-Inhalt ausblenden, Button bleibt sichtbar */
+.slot.hidden > *:not(.add-slot-btn) {
+  display: none;
+}
+
+.slot.fully-hidden {
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none; /* damit man nicht draufklicken kann */
+}
+/* Hide-Button Styling */
+.delete-slot-btn {
+  position: absolute;
+  top: 5px;            /* passend zum Slot */
+  right: 5px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;  /* rund */
+  font-size: 16px;
+  line-height: 25px;   /* vertikal zentrieren */
+  text-align: center;   /* horizontal zentrieren */
+  padding: 0;           /* überschreibt Standardpadding */
+  border: none;         /* keine Umrandung */
+  background: var(--card-item-background);  /* z.B. orange */
+  color: var(--icon-tertiary);          /* X in weiß */
+  cursor: pointer;
+}
+.delete-slot-btn:hover {
+  background: var(--current-printer-background) !important;
+}
+
+/* Add-Button Styling */
+.add-slot-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background: transparent;           /* kein Hintergrund */
+  border: none;                      /* keine Umrandung */
+  color: var(--color-primary);                    /* Orange */
+  font-size: 2rem;                   /* große Anzeige */
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;                       /* über allem */
+  padding: 0;
+  line-height: 1;
+}
+
+
+.field {
+  display: flex;
+  flex-direction: column; /* Label über dem Input/Select */
+  min-width: 100px; /* optional: Mindestbreite für Konsistenz */
+}
+
+.field label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.field select {
+  display: inline-block;
+  border: none;
+  border-radius: 2px;
+  background-color: var(--table-row-highlight);
+  color: var(--color-text);
+  padding: 0.19rem 1.3rem;
+  line-height: 1.2rem;
+  font-family: 'FreeSans', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+
+  position: relative;
+}
+
+.field select:focus {
+  outline: 1px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+label {
+  display: block;
+  margin: 0.2rem 0;
+}
+
+input[type="color"] {
+  margin-left: 0.5rem;
+}
+
+.color-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  background: var(--table-row-highlight); /* gleiche Farbe wie deine Selects */
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  box-sizing: border-box;
+}
+
+.color-wrapper .icon {
+  width: 22px;
+  height: 22px;
+  fill: var(--icon-secondary);
+  flex-shrink: 0;
+}
+
+.color-display {
+  flex: 1;
+  height: 1.2rem;
+  border-radius: 2px;
+  background-color: #ff6600;
+  cursor: pointer;
+}
+
+/* Das eigentliche native Farbfeld bleibt unsichtbar, über dem color-display */
+.color-wrapper input[type="color"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;      /* unsichtbar */
+  cursor: pointer; /* klickbar */
+  border: none;
+}
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.select-wrapper select {
+  width: 100%;
+  padding-left: 32px; /* Platz für das Icon */
+  padding-right: 1.3rem;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1; /* muss kleiner als Icon sein */
+}
+
+/* Icon im Select sichtbar machen */
+.select-wrapper .icon {
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+  z-index: 2; /* Icon über Select */
+  fill: var(--current-printer-badge-text, #000);
+}
+
+.controls {
+  text-align: center;
+  margin: 1rem;
+}
+
+button {
+  background: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  padding: 0.6rem 1rem;
+  margin: 0.3rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--color-primary-faded);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Modal Basis */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: var(--background-body);
+  color: var(--color-text);
+  margin: 10% auto;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.fieldModal {
+  margin-bottom: 1rem;
+}
+
+.fieldModal label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}

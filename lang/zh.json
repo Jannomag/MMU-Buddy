@@ -1,0 +1,12 @@
+{
+  "login_title": "登录",
+  "login_password": "密码：",
+  "login_button": "登录",
+  "slot": "槽位",
+  "saved_message": "已保存",
+  "logout_button": "登出",
+  "brand": "品牌",
+  "material": "类型",
+  "color": "颜色",
+  "settings": "设置"
+}

@@ -1,0 +1,12 @@
+{
+  "login_title": "Connexion",
+  "login_password": "Mot de passe :",
+  "login_button": "Se connecter",
+  "slot": "Emplacement",
+  "saved_message": "Enregistré",
+  "logout_button": "Déconnexion",
+  "brand": "Marque",
+  "material": "Type",
+  "color": "Couleur",
+  "settings": "Paramètres"
+}

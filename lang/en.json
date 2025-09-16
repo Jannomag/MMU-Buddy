@@ -1,0 +1,12 @@
+{
+  "login_title": "Login",
+  "login_password": "Password:",
+  "login_button": "Login",
+  "slot": "Slot",
+  "saved_message": "Saved",
+  "logout_button": "Logout",
+  "brand": "Brand",
+  "material": "Type",
+  "color": "Color",
+  "settings": "Settings"
+}

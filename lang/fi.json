@@ -1,0 +1,12 @@
+{
+  "login_title": "Kirjaudu sisään",
+  "login_password": "Salasana:",
+  "login_button": "Kirjaudu",
+  "slot": "Paikka",
+  "saved_message": "Tallennettu",
+  "logout_button": "Kirjaudu ulos",
+  "brand": "Merkki",
+  "material": "Tyyppi",
+  "color": "Väri",
+  "settings": "Asetukset"
+}

@@ -1,0 +1,12 @@
+{
+  "login_title": "ログイン",
+  "login_password": "パスワード：",
+  "login_button": "ログイン",
+  "slot": "スロット",
+  "saved_message": "保存されました",
+  "logout_button": "ログアウト",
+  "brand": "ブランド",
+  "material": "種類",
+  "color": "色",
+  "settings": "設定"
+}

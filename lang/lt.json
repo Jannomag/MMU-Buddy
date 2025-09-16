@@ -1,0 +1,12 @@
+{
+  "login_title": "Prisijungti",
+  "login_password": "Slaptažodis:",
+  "login_button": "Prisijungti",
+  "slot": "Langelis",
+  "saved_message": "Išsaugota",
+  "logout_button": "Atsijungti",
+  "brand": "Prekės ženklas",
+  "material": "Tipas",
+  "color": "Spalva",
+  "settings": "Nustatymai"
+}
